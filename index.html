@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Frontend Mentor | Time tracking dashboard</title>
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body style="background-color: hsl(226, 43%, 10%);" class="flex lg:h-[100vh] justify-center lg:items-center flex-col gap-[0px]">
+  <main class="lg:w-[50rem] lg:h-[32em]  lg:flex gap-[25px] lg:m-auto justify-center pt-[55px] lg:pt-[0px] px-[20px] flex flex-col lg:flex-row">
+    <div class="flex flex-col lg:h-[32rem] rounded-t-[15px] rounded-b-[15px] w-full" style="background-color: hsl(235, 46%,20%)  ">
+      <span style="background-color: hsl(246, 80%, 60%);" class="lg:h-[21rem] rounded-t-[10px] lg:w-[15rem] pt-[35px] pl-[30px] rounded-b-[15px] flex lg:flex-col gap-[20px] lg:gap-[0px]">
+        <div class="w-[60px] h-[60px] border-[3px] border-white rounded-full mb-[40px]">
+          <img src="./images/image-jeremy.png" alt="" class="w-[60px]">
+        </div>
+        <h1 class="flex flex-col lg:text-[42px] text-[30px] text-white font-medium"><span class=" text-[16px]" style="color: hsl(236, 100%, 87%);">Report for</span>Jeremy Robson</h1>
+      </span>
+      <span class="lg:h-[11rem] lg:pl-[25px] lg:pt-[30px] flex lg:flex-col lg:gap-[15px] text-[18px] rounded-b-[15px] h-[3.5rem] items-center lg:items-start justify-around lg:justify-normal" style="  color: hsl(236, 100%, 87%); ">
+        <p class="cursor-pointer" id="daily">Daily</p>
+        <p class="cursor-pointer" id="weekly">Weekly</p>
+        <p class="cursor-pointer" id="monthly">Monthly</p>
+      </span>
+    </div>
+    <div class="flex flex-col gap-[25px]">
+      <div  class="lg:flex gap-[25px] lg:h-[15rem] flex flex-col lg:flex-row ">
+        <span class="flex flex-col lg:w-[15rem] lg:h-[15rem] rounded-t-[12px] rounded-b-[10px] lg:rounded-b-[19px]" style="background-color: hsl(15, 100%, 70%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-work.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] lg:py-[25px] py-[15px]">
+          
+            <p class="flex justify-between items-center text-[19px] text-white font-normal">Work <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+           <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+            <h1 class="flex flex-col text-[48px] text-white font-medium" id="work">32hrs </h1><span id="workprevious"
+              class="text-[18px]  font-normal " style="color: hsl(236, 100%, 87%);"> Last Week -
+              36hrs</span>
+           </span>
+          </span>
+        </span>
+        <span class="flex flex-col lg:w-[15rem] rounded-t-[12px] lg:rounded-b-[19px] rounded-b-[9px] lg:h-[15rem]" style="background-color: hsl(195, 74%, 62%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-play.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] lg:py-[25px] py-[15px]">
+            <p class="flex justify-between items-center text-[19px] text-white font-normal">Play <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+              <h1 class="flex flex-col text-[48px] text-white font-medium" id="play">10hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-normal " id="playprevious" style="color: hsl(236, 100%, 87%);"> Last Week -
+                8hrs</span>
+            </span>
+          </span>
+        </span>
+        <span class="flex flex-col lg:w-[15rem] lg:h-[15rem] rounded-t-[12px] lg:rounded-b-[19px] rounded-b-[9px]" style="background-color: hsl(348, 100%, 68%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-study.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
+            <p class="flex justify-between items-center text-[19px] text-white font-normal" >Study <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+              <h1 class="flex flex-col text-[48px] text-white font-medium" id="Study">4hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="studyprevious"> Last Week -
+                7hrs</span>
+            </span>
+
+          </span>
+        </span>
+      </div>
+      <div class="lg:flex gap-[25px] lg:h-[15rem] flex flex-col lg:flex-row ">
+        <span class="flex flex-col lg:w-[15rem] rounded-t-[12px] lg:rounded-b-[19px] rounded-b-[9px]" style="background-color: hsl(145, 58%, 55%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-exercise.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
+            <p class="flex justify-between items-center text-[19px] text-white font-normal" >Exercise <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+              <h1 class="flex flex-col text-[48px] text-white font-medium" id="exercise">4hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="exerciseprevious"> Last Week -
+                5hrs</span>
+            </span>
+          </span>
+        </span>
+        <span class="flex flex-col lg:w-[15rem] rounded-t-[12px] lg:rounded-b-[19px] rounded-b-[9px]" style="background-color:  hsl(264, 64%, 52%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-social.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
+            <p class="flex justify-between items-center text-[19px] text-white font-normal" >Social <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+              <h1 class="flex flex-col text-[48px] text-white font-medium" id="social">5hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="socialprevious"> Last Week -
+                10hrs</span>
+            </span>
+          </span>
+        </span>
+        <span class="flex flex-col lg:w-[15rem] rounded-t-[12px] lg:rounded-b-[19px] rounded-b-[9px]" style="background-color:   hsl(43, 84%, 65%);">
+          <p class="h-[2.5rem] flex justify-end items-end">
+            <img src="./images/icon-self-care.svg" alt="" class="flex justify-end items-end h-full">
+          </p>
+          <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
+            <p class="flex justify-between items-center text-[19px] text-white font-normal" >Self Care <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
+            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
+              <h1 class="flex flex-col text-[48px] text-white font-medium" id="selfCare">2hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="selfCarePrevious"> Last Week -
+                2hrs</span>
+            </span>
+          </span>
+        </span>
+      </div>
+    </div>
+  </main>
+ 
+ 
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Victory Oguchiluru Obasi</a>.
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
