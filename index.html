@@ -8,11 +8,12 @@
   <title>Frontend Mentor | Time tracking dashboard</title>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Big+Shoulders+Display:wght@100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&family=Lexend+Deca:wght@100..900&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
-<body style="background-color: hsl(226, 43%, 10%);" class="flex lg:h-[100vh] justify-center lg:items-center flex-col gap-[0px]">
+<body style="background-color: hsl(226, 43%, 10%); font-family: Hanken Grotesk, seriff; " class="flex lg:h-[100vh] justify-center lg:items-center flex-col gap-[0px]">
   <main class="lg:w-[50rem] lg:h-[32em]  lg:flex gap-[25px] lg:m-auto justify-center pt-[55px] lg:pt-[0px] px-[20px] flex flex-col lg:flex-row">
     <div class="flex flex-col lg:h-[32rem] rounded-t-[15px] rounded-b-[15px] w-full" style="background-color: hsl(235, 46%,20%)  ">
       <span style="background-color: hsl(246, 80%, 60%);" class="lg:h-[21rem] rounded-t-[10px] lg:w-[15rem] pt-[35px] pl-[30px] rounded-b-[15px] flex lg:flex-col gap-[20px] lg:gap-[0px]">
@@ -37,8 +38,8 @@
           
             <p class="flex justify-between items-center text-[19px] text-white font-normal">Work <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
            <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-            <h1 class="flex flex-col text-[48px] text-white font-medium" id="work">32hrs </h1><span id="workprevious"
-              class="text-[18px]  font-normal " style="color: hsl(236, 100%, 87%);"> Last Week -
+            <h1 class="flex flex-col text-[48px] text-white font-normal" id="work">32hrs </h1><span id="workprevious"
+              class="text-[18px]  font-medium " style="color: hsl(236, 100%, 87%);"> Last Week -
               36hrs</span>
            </span>
           </span>
@@ -50,8 +51,8 @@
           <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] lg:py-[25px] py-[15px]">
             <p class="flex justify-between items-center text-[19px] text-white font-normal">Play <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
             <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-              <h1 class="flex flex-col text-[48px] text-white font-medium" id="play">10hrs </h1>
-              <span class="text-[18px]  pt-[7px] font-normal " id="playprevious" style="color: hsl(236, 100%, 87%);"> Last Week -
+              <h1 class="flex flex-col text-[48px] text-white  font-normal-medium" id="play">10hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-medium " id="playprevious" style="color: hsl(236, 100%, 87%);"> Last Week -
                 8hrs</span>
             </span>
           </span>
@@ -63,8 +64,8 @@
           <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
             <p class="flex justify-between items-center text-[19px] text-white font-normal" >Study <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
             <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-              <h1 class="flex flex-col text-[48px] text-white font-medium" id="Study">4hrs </h1>
-              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="studyprevious"> Last Week -
+              <h1 class="flex flex-col text-[48px] text-white  font-normal" id="Study">4hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-medium" style="color: hsl(236, 100%, 87%);" id="studyprevious"> Last Week -
                 7hrs</span>
             </span>
 
@@ -79,8 +80,8 @@
           <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
             <p class="flex justify-between items-center text-[19px] text-white font-normal" >Exercise <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
             <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-              <h1 class="flex flex-col text-[48px] text-white font-medium" id="exercise">4hrs </h1>
-              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="exerciseprevious"> Last Week -
+              <h1 class="flex flex-col text-[48px] text-white  font-normal" id="exercise">4hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-medium" style="color: hsl(236, 100%, 87%);" id="exerciseprevious"> Last Week -
                 5hrs</span>
             </span>
           </span>
@@ -92,8 +93,8 @@
           <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
             <p class="flex justify-between items-center text-[19px] text-white font-normal" >Social <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
             <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-              <h1 class="flex flex-col text-[48px] text-white font-medium" id="social">5hrs </h1>
-              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="socialprevious"> Last Week -
+              <h1 class="flex flex-col text-[48px] text-white  font-normal" id="social">5hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-medium" style="color: hsl(236, 100%, 87%);" id="socialprevious"> Last Week -
                 10hrs</span>
             </span>
           </span>
@@ -105,8 +106,8 @@
           <span style="background-color: hsl(235, 46%, 20%);" class="lg:w-[15rem] lg:h-[12.5rem] rounded-t-[12px] rounded-b-[10px] px-[20px] py-[25px]">
             <p class="flex justify-between items-center text-[19px] text-white font-normal" >Self Care <span><img src="./images/icon-ellipsis.svg" alt=""></span></p>
             <span class="flex lg:flex-col justify-between lg:justify-normal items-center lg:items-start">
-              <h1 class="flex flex-col text-[48px] text-white font-medium" id="selfCare">2hrs </h1>
-              <span class="text-[18px]  pt-[7px] font-normal" style="color: hsl(236, 100%, 87%);" id="selfCarePrevious"> Last Week -
+              <h1 class="flex flex-col text-[48px] text-white  font-normal" id="selfCare">2hrs </h1>
+              <span class="text-[18px]  pt-[7px] font-medium" style="color: hsl(236, 100%, 87%);" id="selfCarePrevious"> Last Week -
                 2hrs</span>
             </span>
           </span>
